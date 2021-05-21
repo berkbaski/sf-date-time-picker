@@ -1,9 +1,26 @@
 import TextBox from 'sf-core/ui/textbox';
+import FlexLayout from 'sf-core/ui/flexlayout';
+import Color from 'sf-core/ui/color'
 
-interface IDatePickerCreateOptions {
+export interface ILayoutStyle {
+    justifyContent?: FlexLayout.JustifyContent = FlexLayout.JustifyContent.CENTER;
+    alignItems?: FlexLayout.AlignItems = FlexLayout.AlignItems.CENTER;
+    backgroundColor?: Color = Color.create(0, 0, 0, 0.7)
+}
+
+export interface IDateHourPicker {
+    yearRange?: number = 40;
+    dateFormat?: string = 'DD.MM.YYYY';
+    hourFormat?: string = 'HH:mm';
+    dayWithNameFormat?: string = 'D ddd';
+    momentStartYear?: number = 1900;
+    layoutStyle?: ILayoutStyle;
+}
+
+export interface IDatePicker {
     /**
-     * Sets the starting day. Defaults to first day of the current month or given month.
-     */
+    * Sets the starting day. Defaults to first day of the current month or given month.
+    */
     startDay?: number;
 
     /**
@@ -36,17 +53,29 @@ interface IDatePickerCreateOptions {
      * Sets the starting year. Defaults to PICKER_YEAR_RANGE at constants
      */
     startYear?: number;
+
     /**
      * Sets the ending year. Defaults to current year.
      */
     endYear?: number;
+
     /**
      * Sets the starting year on picker. Defaults to endYear ( default year picker is reversed. )
      */
     currentYear?: number;
+
+    /**
+     * If textbox is passed, it will create inputView on iOS and write results to textbox.
+     */
+
+    textBox?: TextBox;
+    /**
+     * Function to execute when Done button is pressed. Does not take any callbacks.
+     */
+    onPickerDone: (date: Date) => void;
 }
 
-interface IHourPickerCreateOptions {
+export interface IHourPicker {
     /**
      * Sets the starting hour. Defaults to current hour.
      */
@@ -89,24 +118,12 @@ interface IHourPickerCreateOptions {
      * If set, the picker will not be shown in keyboard layout
      */
     skipInputView?: boolean;
-}
 
-export interface IDatePicker extends IDatePickerCreateOptions {
     /**
      * If textbox is passed, it will create inputView on iOS and write results to textbox.
      */
     textBox?: TextBox;
-    /**
-     * Function to execute when Done button is pressed. Does not take any callbacks.
-     */
-    onPickerDone: (date: Date) => void;
-}
 
-export interface IHourPicker extends IHourPickerCreateOptions {
-    /**
-     * If textbox is passed, it will create inputView on iOS and write results to textbox.
-     */
-    textBox?: TextBox;
     /**
      * Function to execute when Done button is pressed. Does not take any callbacks.
      */
