@@ -98,7 +98,6 @@ export function createDatePicker(options: IDatePicker): FlexLayout | Dialog {
 }
 
 export function createHourPicker(options: IHourPicker): FlexLayout | Dialog {
-    const momentObject = moment();
     let currentMoment = moment();
     const processResult = () => {
         const hourFormat = getHourString({

@@ -1,19 +1,33 @@
 import Page1Design from 'generated/pages/page1';
-import componentContextPatch from "@smartface/contx/lib/smartface/componentContextPatch";
-import PageTitleLayout from "components/PageTitleLayout";
-import System from "sf-core/device/system";
+import { createDatePicker, createHourPicker } from 'lib/date-time-picker'
+import Dialog from 'sf-core/ui/dialog';
 
 export default class Page1 extends Page1Design {
     router: any;
-	constructor () {
+    constructor() {
         super();
-		// Overrides super.onShow method
+        // Overrides super.onShow method
         this.onShow = onShow.bind(this, this.onShow.bind(this));
-		// Overrides super.onLoad method
-		this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
-        this.btnNext.onPress = () => {
-            this.router.push("/pages/page2", { message: "Hello World!" });
-        }
+        // Overrides super.onLoad method
+        this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
+
+        this.btnOpenDatePicker.onPress = () => {
+            const datePickerDialog = createDatePicker({
+                onPickerDone: date => {
+                    this.lblDateValue.text = date.toDateString();
+                }
+            }) as Dialog;
+            datePickerDialog.show();
+        };
+        this.btnOpenTimePicker.onPress = () => {
+            const timePickerDialog = createHourPicker({
+                skipInputView: true,
+                onPickerDone: date => {
+                    this.lblTimeValue.text = date.toTimeString();
+                }
+            }) as Dialog;
+            timePickerDialog.show();
+        };
     }
 }
 
@@ -22,8 +36,7 @@ export default class Page1 extends Page1Design {
  * This event is called when a page appears on the screen (everytime).
  */
 function onShow(superOnShow: () => void) {
-  superOnShow();
-  this.headerBar.titleLayout.applyLayout();
+    superOnShow();
 }
 
 /**
@@ -32,11 +45,4 @@ function onShow(superOnShow: () => void) {
  */
 function onLoad(superOnLoad: () => void) {
     superOnLoad();
-    console.info('Onload page1');
-    this.headerBar.leftItemEnabled = false;
-    this.headerBar.titleLayout = new PageTitleLayout();
-    componentContextPatch(this.headerBar.titleLayout, "titleLayout");
-    if (System.OS === "Android") {
-        this.headerBar.title = "";
-    }
 }

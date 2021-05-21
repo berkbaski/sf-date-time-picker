@@ -1,0 +1,18 @@
+{
+    ".dialog": {
+        "alignItems": "CENTER",
+        "justifyContent": "CENTER",
+        "backgroundColor": "rgba(0,0,0,0.4)",
+        "&-transparent": {
+            "backgroundColor": "${transparent}"
+        }
+    },
+    ".dialog-customView": {
+        "width": 50,
+        "height": 50,
+        "flexProps": {
+            "justifyContent": "CENTER",
+            "alignItems": "CENTER"
+        }
+    }
+}
