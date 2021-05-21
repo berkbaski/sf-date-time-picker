@@ -8,8 +8,7 @@
 				"children": [
 					"42b807d1",
 					"b7d28cff",
-					"980522a9",
-					"9e49-7873-afba-472b"
+					"bea2-aba9-0dd3-485f"
 				],
 				"isRemovable": true,
 				"name": "page1",
@@ -29,8 +28,7 @@
 				"paddingRight": 16,
 				"safeAreaEnabled": true
 			},
-			"version": "6.15.1",
-			"degree": 0
+			"version": "6.15.1"
 		},
 		{
 			"className": ".sf-statusBar",
@@ -44,8 +42,7 @@
 			"type": "StatusBar",
 			"userProps": {
 				"visible": true
-			},
-			"degree": 1
+			}
 		},
 		{
 			"className": ".sf-headerBar",
@@ -61,71 +58,111 @@
 			"userProps": {
 				"title": "Page1",
 				"visible": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout #page1.sf-flexLayout",
+			"id": "bea2-aba9-0dd3-485f",
+			"props": {
+				"children": [
+					"6cdf-d509-fdff-6fd1",
+					"6289-9560-69a6-92bb"
+				],
+				"name": "flContainer",
+				"parent": "e891b86d"
 			},
-			"degree": 1
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-flexLayout #page1.fl-select-container",
+			"id": "6cdf-d509-fdff-6fd1",
+			"props": {
+				"children": [
+					"672a-9ff3-c36e-235e",
+					"ab0f-8d77-3974-7033"
+				],
+				"name": "flDate",
+				"parent": "bea2-aba9-0dd3-485f"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-button",
+			"id": "672a-9ff3-c36e-235e",
+			"props": {
+				"children": [],
+				"name": "btnOpenDatePicker",
+				"parent": "6cdf-d509-fdff-6fd1",
+				"text": "button1"
+			},
+			"type": "Button",
+			"userProps": {
+				"testId": "cnqJKBvdW",
+				"text": "button1"
+			}
 		},
 		{
 			"className": ".sf-label",
-			"id": "980522a9",
+			"id": "ab0f-8d77-3974-7033",
 			"props": {
-				"autoHeight": 39.325842696629216,
 				"children": [],
-				"name": "lbl",
-				"parent": "e891b86d",
-				"text": "Page1",
+				"name": "lblDateValue",
+				"parent": "6cdf-d509-fdff-6fd1",
+				"text": "label1"
+			},
+			"type": "Label",
+			"userProps": {
+				"testId": "eo1KoXYAo",
+				"text": "label1"
+			}
+		},
+		{
+			"className": ".sf-flexLayout #page1.fl-select-container",
+			"id": "6289-9560-69a6-92bb",
+			"props": {
+				"children": [
+					"6f75-ecb8-cac0-c052",
+					"4633-a34f-e270-74ed"
+				],
+				"name": "flTime",
+				"parent": "bea2-aba9-0dd3-485f"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-button",
+			"id": "6f75-ecb8-cac0-c052",
+			"props": {
+				"children": [],
+				"name": "btnOpenTimePicker",
+				"parent": "6289-9560-69a6-92bb",
+				"text": "button1"
+			},
+			"type": "Button",
+			"userProps": {
+				"testId": "ybXFx6KFm",
+				"text": "button1"
+			}
+		},
+		{
+			"className": ".sf-label",
+			"id": "4633-a34f-e270-74ed",
+			"props": {
+				"children": [],
+				"name": "lblTimeValue",
+				"parent": "6289-9560-69a6-92bb",
+				"text": "label1",
 				"usePageVariable": true
 			},
 			"type": "Label",
 			"userProps": {
-				"autoHeight": 39.325842696629216,
-				"backgroundColor": "rgba( 255, 255, 255, 0 )",
-				"flexProps": {
-					"marginLeft": 20,
-					"marginRight": 20,
-					"alignSelf": "STRETCH",
-					"flexGrow": 1
-				},
-				"font": {
-					"size": 32,
-					"bold": false,
-					"italic": false,
-					"family": "SFProText",
-					"style": "Regular"
-				},
-				"height": 600,
-				"multiline": true,
-				"text": "Page1",
-				"textAlignment": "MIDCENTER",
-				"textColor": "rgba( 210, 210, 210, 1 )",
-				"usePageVariable": true,
-				"testId": "L-42gAben"
-			},
-			"degree": 1
-		},
-		{
-			"className": ".sf-button",
-			"id": "9e49-7873-afba-472b",
-			"props": {
-				"autoHeight": 50.561797752808985,
-				"children": [],
-				"name": "btnNext",
-				"parent": "e891b86d",
-				"text": "Next Page",
+				"testId": "EWXQeX_Ix",
+				"text": "label1",
 				"usePageVariable": true
-			},
-			"type": "Button",
-			"userProps": {
-				"autoHeight": 50.561797752808985,
-				"flexProps": {
-					"alignSelf": "AUTO",
-					"positionType": "RELATIVE"
-				},
-				"text": "Next Page",
-				"usePageVariable": true,
-				"width": null,
-				"testId": "ucEDBF6ZMB"
-			},
-			"degree": 1
+			}
 		}
 	]
 }
