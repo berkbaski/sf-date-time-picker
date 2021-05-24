@@ -3,17 +3,17 @@ import FlexLayout from 'sf-core/ui/flexlayout';
 import Color from 'sf-core/ui/color'
 
 export interface ILayoutStyle {
-    justifyContent?: FlexLayout.JustifyContent = FlexLayout.JustifyContent.CENTER;
-    alignItems?: FlexLayout.AlignItems = FlexLayout.AlignItems.CENTER;
-    backgroundColor?: Color = Color.create(0, 0, 0, 0.7)
+    justifyContent?: FlexLayout.JustifyContent;
+    alignItems?: FlexLayout.AlignItems;
+    backgroundColor?: Color;
 }
 
 export interface IDateHourPicker {
-    yearRange?: number = 40;
-    dateFormat?: string = 'DD.MM.YYYY';
-    hourFormat?: string = 'HH:mm';
-    dayWithNameFormat?: string = 'D ddd';
-    momentStartYear?: number = 1900;
+    yearRange?: number;
+    dateFormat?: string;
+    hourFormat?: string;
+    dayWithNameFormat?: string;
+    momentStartYear?: number;
     layoutStyle?: ILayoutStyle;
 }
 

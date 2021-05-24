@@ -14,9 +14,21 @@ import TextAlignment from 'sf-core/ui/textalignment';
 import { IDateHourPicker, IDatePicker, IHourPicker } from 'lib/date-time-picker/types';
 
 export class DateTimePicker {
-    private options: IDateHourPicker;
-    constructor(options: IDateHourPicker) {
-        this.options = options;
+    options: IDateHourPicker;
+    constructor(options?: IDateHourPicker) {
+        this.options = {};
+        this.options.yearRange = options.yearRange || 40;
+        this.options.dateFormat = options.dateFormat || 'DD.MM.YYYY';
+        this.options.hourFormat = options.hourFormat || 'HH:mm';
+        this.options.dayWithNameFormat = options.dayWithNameFormat || 'D ddd';
+        this.options.momentStartYear = options.momentStartYear || 1900;
+
+        if (!options.layoutStyle) options.layoutStyle = {};
+
+        this.options.layoutStyle = {};
+        this.options.layoutStyle.backgroundColor = options.layoutStyle.backgroundColor || Color.create(70, 0, 0, 0);
+        this.options.layoutStyle.justifyContent = options.layoutStyle.justifyContent || FlexLayout.JustifyContent.CENTER;
+        this.options.layoutStyle.alignItems = options.layoutStyle.alignItems || FlexLayout.AlignItems.CENTER;
     }
 
     createDatePicker(options: IDatePicker): FlexLayout | Dialog {
@@ -166,7 +178,7 @@ export class DateTimePicker {
             typeof options.onPickerCancel === "function" && options.onPickerCancel();
             pickerDialog.hide();
         };
-        const { layoutStyle: { backgroundColor, alignItems, justifyContent } } = this.options;
+        const { backgroundColor, alignItems, justifyContent } = this.options.layoutStyle;
         Object.assign(pickerDialog.layout, { backgroundColor, alignItems, justifyContent });
         const flPickerDialog = new FlexLayout({
             height: 250,

@@ -11,37 +11,11 @@
     <item name="___library___Simple_listviewitem_LblChevron" type="id" />
     <item name="___library___Simple_gridviewItem_LblSubtitle" type="id" />
     <item name="___library___Simple_listviewitem_FlLine" type="id" />
-    <item name="_Page1_Lbl" type="id" />
-    <item name="_Page1_BtnNext" type="id" />
     <item name="_Page2_Lbl" type="id" />
     <item name="_Page2_BtnSayHello" type="id" />
-    <item name="_Page1_Button1" type="id" />
-    <item name="_Page1_FlexLayout1" type="id" />
     <item name="_Page1_FlContainer" type="id" />
-    <item name="_Page1_FlContainer_FlexLayout1" type="id" />
-    <item name="_Page1_FlContainer_FlexLayout1_FlexLayout1" type="id" />
-    <item name="_Page1_FlContainer_FlDate" type="id" />
-    <item name="_Page1_FlContainer_FlDate_FlexLayout1" type="id" />
-    <item name="_Page1_FlContainer_FlDate_1" type="id" />
-    <item name="_Page1_FlContainer_FlDate_1_FlexLayout1" type="id" />
-    <item name="_Page1_FlContainer_FlTime" type="id" />
-    <item name="_Page1_FlContainer_FlDate_Button1" type="id" />
-    <item name="_Page1_FlContainer_FlDate_Label1" type="id" />
-    <item name="_Page1_FlContainer_FlTime_Button1" type="id" />
-    <item name="_Page1_FlContainer_FlTime_Label1" type="id" />
-    <item name="_Page1_FlContainer_FlDate_LblDateValue" type="id" />
-    <item name="_Page1_FlContainer_FlDate_Bt" type="id" />
-    <item name="_Page1_FlContainer_FlDate_BtnDate" type="id" />
-    <item name="_Page1_FlContainer_FlDate_BtnOpenDatePicker" type="id" />
-    <item name="_Page1_FlContainer_FlTime_Btn" type="id" />
-    <item name="_Page1_FlContainer_FlTime_BtnOpenTimePicker" type="id" />
-    <item name="_Page1_FlContainer_FlTime_LblTimeValue" type="id" />
-    <item name="_Page1_FlContainer_Button1" type="id" />
-    <item name="_Page1_FlContainer_Label1" type="id" />
     <item name="_Page1_FlContainer_BtnOpenDatePicker" type="id" />
-    <item name="_Page1_FlContainer_BtnOpenDatePicker_1" type="id" />
-    <item name="_Page1_FlContainer_Label1_1" type="id" />
-    <item name="_Page1_FlContainer_BtnOpenTimePicker" type="id" />
     <item name="_Page1_FlContainer_LblDateValue" type="id" />
+    <item name="_Page1_FlContainer_BtnOpenTimePicker" type="id" />
     <item name="_Page1_FlContainer_LblTimeValue" type="id" />
 </resources>

@@ -1,0 +1,23 @@
+{
+	"#page1": {
+		".sf": {
+			"&-flexLayout": {
+				"flexProps": {
+					"flexGrow": 2,
+					"flexDirection": "COLUMN"
+				},
+				"height": null
+			}
+		},
+		".fl": {
+			"&-select": {
+				"&-container": {
+					"flexProps": {
+						"flexGrow": 1
+					},
+					"height": null
+				}
+			}
+		}
+	}
+}

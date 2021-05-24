@@ -1,5 +1,5 @@
 import Page1Design from 'generated/pages/page1';
-import { createDatePicker, createHourPicker } from 'lib/date-time-picker'
+import { DateTimePicker } from 'lib/date-time-picker'
 import Dialog from 'sf-core/ui/dialog';
 
 export default class Page1 extends Page1Design {
@@ -12,7 +12,8 @@ export default class Page1 extends Page1Design {
         this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
 
         this.btnOpenDatePicker.onPress = () => {
-            const datePickerDialog = createDatePicker({
+            const dateTimePicker = new DateTimePicker({});
+            const datePickerDialog = dateTimePicker.createDatePicker({
                 onPickerDone: date => {
                     this.lblDateValue.text = date.toDateString();
                 }
@@ -20,7 +21,8 @@ export default class Page1 extends Page1Design {
             datePickerDialog.show();
         };
         this.btnOpenTimePicker.onPress = () => {
-            const timePickerDialog = createHourPicker({
+            const dateTimePicker = new DateTimePicker({});
+            const timePickerDialog = dateTimePicker.createHourPicker({
                 skipInputView: true,
                 onPickerDone: date => {
                     this.lblTimeValue.text = date.toTimeString();
